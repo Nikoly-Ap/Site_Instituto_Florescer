@@ -1,0 +1,8 @@
+cores:
+#BF3B53 (vinho)
+#F2F0EB (branco)
+#F27B13 (laranja)
+#F2786D (pêssego)
+#F29BA2 (rosa)
+#F2A413 (amarelo)
+#73835C (verde)
