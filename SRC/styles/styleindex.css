@@ -3,19 +3,146 @@
     font-family: 'Poppins',ExtraLight 200;
     margin:0;
     padding:0;
-    box-sizing: 0;
+    box-sizing: border-box;
 
 
 }
-.index{
+.logo img{
+    flex: 1;
+    max-width: 100%;
+    margin:auto 0% ;
+    display: block;
+
+}
+/* @media (max-width: 480px) {
+    .logo img{ 
+        max-width: 400px;
+        height: auto;
+
+    }
+} */
+
+.logoinstituto{
     display: flex;
-    max-width: 1400px;
-    margin: 0 auto;
-    height: 300px;
+    margin:auto 0% ;
+    max-width: 100%;
+    max-height: 700px;
+    align-items: center;
+    padding-top: 30px;
+}
+.hidden {
+    opacity: 0;
+    transition: all 100ms;
+    transform:translateX(-100%)
     
 }
-img{
-    max-width: 100%;
-    display: block;
-    margin: 10px, 10px;
+.show{
+    opacity: 1;
+    transform:translateX(6%) ;
+    transition: all 0.5s;
+    
 }
+.hiddens{
+    background-color:#bf3b53d1 ;
+    max-width: 100%;
+    border-radius: 30px;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    margin-top:15px;
+
+}
+
+ @media (max-width: 768px) {
+    .imgabout, .imghistory, .imgwork, .imgtransparency, .imgcontact {
+       width: 80%;
+       max-width: 200px;
+       height: auto;
+    }
+ }
+ @media (max-width: 480px) {
+    .imgabout, .imghistory, .imgwork, .imgtransparency, .imgcontact {
+       width: 90%;
+       max-width: 80px;
+       height: auto;
+    }
+ }
+.logos:nth-child(2){
+    transition-delay: 200ms;
+}
+.logos:nth-child(3){
+    transition-delay: 300ms;
+}
+.logos:nth-child(4){
+    transition-delay: 400ms;
+}
+.logos:nth-child(5){
+    transition-delay: 500ms;
+}
+
+.abouttext a:hover,.historytext a:hover,.worktext a:hover,.transparencytext a:hover,.contacttext a:hover{
+    transition:color 0.0ms;
+}
+.imgabout, .imghistory, .imgwork, .imgtransparency, .imgcontact {
+    width: 250px;
+    height: 250px;
+    max-width: 100%;
+    height: auto;
+   
+ }
+ .circleimg{
+    background-color: #fff9ea;
+    height: 250px;
+    border-radius: 50%;
+    margin: 25px;
+    align-items: center;
+
+
+ }
+ .flowerend{
+    width: 1000px;;
+ }
+
+.abouttext,.historytext,.worktext,.transparencytext,.contacttext{
+    display: flex;
+    align-items: center;
+    border-radius:50px;
+    margin:60px
+}
+@media (max-width: 480px) {
+    .abouttext, .historytext, .worktext, .transparencytext, .contacttext {
+        margin: 20px;
+        display: flex;
+    }
+}
+.abouttext h1,.historytext h1,.worktext h1,.transparencytext h1,.contacttext h1{
+    width:150px ;
+    margin:20px
+}
+.abouttext h3,.historytext h3,.worktext h3,.transparencytext h3,.contacttext h3{
+    width: 500px; 
+}
+@media (max-width: 480px) {
+    .abouttext h1, .historytext h1, .worktext h1, .transparencytext h1, .contacttext h1 {
+        font-size: 18px;
+        display: flex;
+        align-items: baseline;
+    }
+    
+    .abouttext h3, .historytext h3, .worktext h3, .transparencytext h3, .contacttext h3 {
+       opacity: 0;
+    }
+}
+
+
+.abouttext a,.historytext a,.worktext a,.transparencytext a,.contacttext a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color:#fff9ea;
+    
+}
+
+
+
+

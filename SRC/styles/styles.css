@@ -11,17 +11,7 @@ body{
     background-color:#fff9ea;
 }
 
-#moldura{
-    position:relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10%;
 
-}
-#moldura img{
-    display: block;
-}
 
 #text_contact{
     flex-direction: column;
