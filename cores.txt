@@ -6,3 +6,4 @@ cores:
 #F29BA2 (rosa)
 #F2A413 (amarelo)
 #73835C (verde)
+#1d1d1dad(cinza)

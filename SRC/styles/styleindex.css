@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 *{
-    font-family: 'Poppins',ExtraLight 200;
-    margin:0;
-    padding:0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-
-
+}
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+    scroll-behavior: smooth;
 }
 .logo img{
     flex: 1;
@@ -14,13 +19,6 @@
     display: block;
 
 }
-/* @media (max-width: 480px) {
-    .logo img{ 
-        max-width: 400px;
-        height: auto;
-
-    }
-} */
 
 .logoinstituto{
     display: flex;
@@ -36,37 +34,34 @@
     transform:translateX(-100%)
     
 }
+.logos{
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 20px;
+    flex-direction:row;
+}
 .show{
     opacity: 1;
-    transform:translateX(6%) ;
+    transform:translateX(0%) ;
     transition: all 0.5s;
     
 }
 .hiddens{
-    background-color:#bf3b53d1 ;
     max-width: 100%;
     border-radius: 30px;
-    flex-direction: column;
-    align-items: center;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
     padding: 15px;
     margin-top:15px;
+    flex-wrap: wrap;
+    height: 700px;
 
 }
 
- @media (max-width: 768px) {
-    .imgabout, .imghistory, .imgwork, .imgtransparency, .imgcontact {
-       width: 80%;
-       max-width: 200px;
-       height: auto;
-    }
- }
- @media (max-width: 480px) {
-    .imgabout, .imghistory, .imgwork, .imgtransparency, .imgcontact {
-       width: 90%;
-       max-width: 80px;
-       height: auto;
-    }
- }
+
 .logos:nth-child(2){
     transition-delay: 200ms;
 }
@@ -80,69 +75,221 @@
     transition-delay: 500ms;
 }
 
-.abouttext a:hover,.historytext a:hover,.worktext a:hover,.transparencytext a:hover,.contacttext a:hover{
+.textarea a:hover{
     transition:color 0.0ms;
 }
-.imgabout, .imghistory, .imgwork, .imgtransparency, .imgcontact {
-    width: 250px;
-    height: 250px;
-    max-width: 100%;
-    height: auto;
-   
- }
- .circleimg{
-    background-color: #fff9ea;
-    height: 250px;
-    border-radius: 50%;
-    margin: 25px;
-    align-items: center;
 
-
- }
- .flowerend{
-    width: 1000px;;
- }
-
-.abouttext,.historytext,.worktext,.transparencytext,.contacttext{
+.textarea{
     display: flex;
-    align-items: center;
     border-radius:50px;
-    margin:60px
+    margin: 20px auto;
+    width: 90% ;
+    background-color:#bf3b53d1 ;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
-@media (max-width: 480px) {
-    .abouttext, .historytext, .worktext, .transparencytext, .contacttext {
-        margin: 20px;
+.accordion-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.accordion-header h1 {
+    padding: 30px;
+    color: #fff9ea;
+
+  }
+  
+  .accordion-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    padding: 0 30px;
+  }
+  
+  .accordion-body h3 {
+    color: #fff9ea;
+    margin: 20px 0;
+  }
+  
+  .textarea.active .accordion-body {
+    max-height: 400px; 
+  }
+@media (max-width: 768px) {
+    .textarea {
+        font-size: 22px;
         display: flex;
-    }
-}
-.abouttext h1,.historytext h1,.worktext h1,.transparencytext h1,.contacttext h1{
-    width:150px ;
-    margin:20px
-}
-.abouttext h3,.historytext h3,.worktext h3,.transparencytext h3,.contacttext h3{
-    width: 500px; 
-}
-@media (max-width: 480px) {
-    .abouttext h1, .historytext h1, .worktext h1, .transparencytext h1, .contacttext h1 {
-        font-size: 18px;
-        display: flex;
-        align-items: baseline;
-    }
-    
-    .abouttext h3, .historytext h3, .worktext h3, .transparencytext h3, .contacttext h3 {
-       opacity: 0;
+        
     }
 }
 
-
-.abouttext a,.historytext a,.worktext a,.transparencytext a,.contacttext a{
+.textarea h1{
+    width:200px ;
+    display: flex;
+    justify-content: center;
+}
+.textarea h3{
+    width: 200px; 
+    height:auto ;
+}
+button{
+    border:none;
+    color:#1d1d1dad;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    margin: 20px;
+    display: block;
+    z-index: 30;
+}
+button a{
+    text-decoration: none;
+}
+.donationImgsection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 700px;
+    margin:0 0;
+    overflow: hidden;
+}
+.donationImg img{
+    flex: 1;
+    max-width: 100%;
+    margin:0 0% ;
+    display: block;
+}
+/* .healthList{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+ ul{
+    text-decoration: none;
+    list-style:none;
+}
+.sectionselfcare{
     display: flex;
     align-items: center;
-    text-decoration: none;
-    color:#fff9ea;
-    
+    justify-content: center;
+}
+.conteudo {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none; 
+  }
+
+  .conteudo.ativo {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+.slider {
+    position: relative;
+    width:40%;
+    height: 40%;
+    margin: 0px auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 15;
+    flex-wrap: wrap;
+}
+.slider input{
+    display:none;
+}
+.slides {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    overflow: hidden;
+}
+.slidestwo {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    overflow: hidden;
+}
+.slide img {
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+}
+@media (min-width: 768px) {
+    .slide img {
+        width:400px;
+        height:300px;
+        object-fit: cover;
+    }
+    .slider {
+        width:400px;
+        height: 300px;
+    }
+}
+.body {
+    overflow-x: hidden;
+  }
+
+.manual-navigation{
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    background-color: transparent;
+    flex-wrap: wrap;
 }
 
+.manual-btn{
+    border: 2px solid #868684;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}.manual-btn:hover{
+    background-color: #868684;
+} 
+.manual-btn:not(:last-child){
+    margin-right:20px ;
+}
+#radio1:checked ~.slides .first{
+    margin-left:0;
+
+}
+#radio2:checked ~.slides .first{
+    margin-left:-100%
+
+}
+#radio3:checked ~.slides .first{
+    margin-left:-200%
+}
+
+#radio4:checked ~.slidestwo .first{
+    margin-left:0;
+
+}
+#radio5:checked ~.slidestwo .first{
+    margin-left:-100%
+
+}
+#radio6:checked ~.slidestwo .first{
+    margin-left:-200%
+}/
+
+
+ */
 
 
 

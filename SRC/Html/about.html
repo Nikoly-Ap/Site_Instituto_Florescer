@@ -1,46 +1,142 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato</title>
-    <link rel="stylesheet" href="../styles/header.css">
-    <link rel="stylesheet" href="../styles/styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instituto Florescer</title>
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="stylesheet" href="../styles/stylesabout.css" />
+  </head>
+  <body>
     <header>
-        <nav id = "navbar">
-            <img src="/Fotos/logo4.png" height="70px" width="70px" alt="Flor">
-             <H1 id = Title> <span style="color:#BF3B53">Instituto Florescer</span></H1> 
-             <div class="mobile-menu">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-             </div>
-            <ul class ="nav_list">
-                <li class="nav_item" id="index">
-                    <a href="index.html">Início</a>
-                </li>
-                <li class="nav_item" id="about">
-                    <a href="about.html">Sobre nós</a>
-                </li>
-                <li class="nav_item" id="history">
-                    <a href="history.html">História do Instituto</a>
-                </li>
-                <li class="nav_item" id="work">
-                    <a href="work.html">Com o que o instituto trabalha?</a>
-                </li>
-                <li class="nav_item" id="transparency">
-                    <a href="transparency.html ">Transparência</a>
-                </li>
-                <li class="nav_item" >
-                  <element id="contactselect"><a href="contact.html">Contato</a> </element>
-                </li> 
-            </ul>
-        </nav>
+      <nav id="navbar">
+        <img src="/Fotos/logo4.png" height="70px" width="70px" alt="Flor" />
+        <h1 id="Title">
+          <span style="color: #1d1d1dad">Instituto Florescer</span>
+        </h1>
+        <div class="mobile-menu">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+        <ul class="nav_list">
+          <li class="nav_item" id="index">
+            <a href="index.html">Início</a>
+          </li>
+          <li class="nav_item" id="about">
+            <div id="aboutselect"><a href="about.html">Sobre nós</a></div>
+          </li>
+          <li class="nav_item" id="history">
+            <a href="history.html">História do Instituto</a>
+          </li>
+          <li class="nav_item" id="transparency">
+            <a href="transparency.html ">Transparência</a>
+          </li>
+          <li class="nav_item">
+              <a href="contact.html">Contato</a>
+          </li>
+        </ul>
+      </nav>
     </header>
-    <img src="" alt="">
     <script src="../Javascript/mobile.navbar.js"></script>
-   
-</body>
+    <div class="slider">
+      <input type="radio" name="radio-btn" id="radio1" checked />
+      <input type="radio" name="radio-btn" id="radio2" />
+      <input type="radio" name="radio-btn" id="radio3" />
+      <div class="slides">
+        <div class="slide first">
+          <img src="/Fotos/slide1.png" alt="Imagem1" />
+        </div>
+        <div class="slide">
+          <img src="/Fotos/slide2.png" alt="Imagem2" />
+        </div>
+        <div class="slide">
+          <img src="/Fotos/slide3.png" alt="Imagem3" />
+        </div>
+      </div>
+
+      <div class="navigation-auto">
+        <div class="auto-btn1"></div>
+        <div class="auto-btn2"></div>
+        <div class="auto-btn3"></div>
+      </div>
+
+      <div class="manual-navigation">
+        <label for="radio1" class="manual-btn"></label>
+        <label for="radio2" class="manual-btn"></label>
+        <label for="radio3" class="manual-btn"></label>
+      </div>
+    </div>
+    <section class="textAbout">
+      <div class="textarea">
+        <div class="accordion-header">
+          <h1>Missão:</h1>
+        </div>
+        <div class="accordion-body">
+          <p>
+            Defender os direitos das pessoas com câncer e garantir atendimento
+            às pessoas com mobilidade reduzida.
+          </p>
+        </div>
+      </div>
+      <div class="textarea">
+        <div class="accordion-header">
+          <h1>Visão:</h1>
+        </div>
+        <div class="accordion-body">
+          <p>
+            Ser um projeto referenciado por acolher pessoas em tratamento
+            oncológico, através do atendimento humanizado.
+          </p>
+        </div>
+      </div>
+     
+      <div class="textarea">
+        <div class="accordion-header">
+          <h1>Valores:</h1>
+        </div>
+        <div class="accordion-body">
+          <p>
+            <h2>Empatia:</h2> <h3> o cuidado e a compreensão profunda das necessidades de cada indivíduo.</h3>
+
+            <h2>Inclusão:</h2> <h3>Promovemos a igualdade e a integração de todos, sem discriminação.</h3>
+
+            <h2>Comprometimento:</h2> <h3>Atuamos com dedicação e responsabilidade em todas as nossas ações.</h3>
+
+            <h2>Transparência:</h2> <h3>Mantemos uma comunicação aberta e honesta com nossos assistidos e parceiros.</h3>
+
+            <h2>Respeito:</h2> <h3>Valorizamos e respeitamos a dignidade de cada pessoa, acolhendo suas histórias e experiências.</h3>
+         
+          </p>
+        </div>
+      </div>
+    </section>
+    <script>
+      let count = 1;
+      document.getElementById("radio1").checked = true;
+
+      setInterval(function () {
+        nextImage();
+      }, 5000);
+
+      function nextImage() {
+        count++;
+        if (count > 3) {
+          count = 1;
+        }
+        document.getElementById("radio" + count).checked = true;
+      }
+      const items = document.querySelectorAll(".textarea");
+
+      items.forEach((item) => {
+        item.addEventListener("mouseenter", () => {
+          item.classList.add("active");
+        });
+        // item.addEventListener("mouseleave", () => {
+        //   item.classList.remove("active");
+        // });
+      });
+    </script>
+  </body>
 </html>
