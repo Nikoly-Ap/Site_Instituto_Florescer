@@ -5,10 +5,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Instituto Florescer</title>
-  <link rel="stylesheet" href="../styles/header.css" />
-  <link rel="stylesheet" href="../styles/styles.css" />
-  <link rel="stylesheet" href="../styles/styleindex.css" />
-  <link rel="stylesheet" href="../Html/navbar.html" />
+  <link rel="stylesheet" href="./SRC/styles/header.css" />
+  <link rel="stylesheet" href="./SRC/styles/styleindex.css" />
+  <link rel="stylesheet" href="/navbar.html" />
 </head>
 
 <body>
@@ -29,12 +28,6 @@
         </li>
         <li class="nav_item" id="about">
           <a href="about.html">Sobre nós</a>
-        </li>
-        <li class="nav_item" id="history">
-          <a href="history.html">História do Instituto</a>
-        </li>
-        <li class="nav_item" id="transparency">
-          <a href="transparency.html ">Transparência</a>
         </li>
         <li class="nav_item">
           <a href="contact.html">Contato</a>
@@ -63,23 +56,7 @@
               quidem veritatis quisquam voluptas consequuntur?
             </h3>
           </div>
-          <button><a href="about.html"></a>Saiba mais</button>
-        </div>
-      </div>
-      <div class="hidden">
-        <div class="textarea">
-          <div class="accordion-header">
-            <h1>História</h1>
-          </div>
-          <div class="accordion-body">
-            <h3>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas
-              necessitatibus quos dolore sit aut vel, aspernatur praesentium
-              quibusdam rem perspiciatis tempora nihil similique error quod
-              quidem veritatis quisquam voluptas consequuntur?
-            </h3>
-          </div>
-          <button><a href="history.html"></a>Saiba mais</button>
+           <button onclick="window.location.href='about.html'">Saiba mais</button>
         </div>
       </div>
       <div class="hidden">
@@ -95,7 +72,7 @@
               quidem veritatis quisquam voluptas consequuntur?
             </h3>
           </div>
-          <button><a href="transparency.html"></a>Saiba mais</button>
+            <button onclick="window.location.href='transparency.html'">Saiba mais</button>
         </div>
       </div>
       <div class="hidden">
@@ -111,62 +88,57 @@
               quidem veritatis quisquam voluptas consequuntur?
             </h3>
           </div>
-          <button><a href="contact.html"></a>Saiba mais</button>
+           <button onclick="window.location.href='contact.html'">Saiba mais</button>
         </div>
       </div>
   </section>
-  <hr>
-  <!-- <section class="selfCare">
-    <div>
-      <a href="#teste1" onclick="mostrarConteudo('teste1')">Por que fazer terapia?</a>
-      <a href="#teste2" onclick="mostrarConteudo('teste2')">Auto cuidado</a>    
+  <div class="selectorDiv">
+    <div class="textAreaSelect">
+      <h1>PRINCIPAIS</h1> <h1 id="titleSelect">PROJETOS</h1>
     </div>
-  </section>
-  <section id="teste1" class="conteudo">
-    <div class="slider">
-      <input type="radio" name="radio-btn" id="radio1" checked />
-      <input type="radio" name="radio-btn" id="radio2" />
-      <input type="radio" name="radio-btn" id="radio3" />
-      <div class="slides">
-        <div class="slide first">
-          <img src="/Fotos/terapy1.jpeg" alt="Imagem1" />
-        </div>
-        <div class="slide">
-          <img src="/Fotos/terapy2.jpeg" alt="Imagem2" />
-        </div>
-        <div class="slide">
-          <img src="/Fotos/terapy3.jpeg" alt="Imagem3" />
-        </div>
-        <div class="manual-navigation">
-          <label for="radio1" class="manual-btn"></label>
-          <label for="radio2" class="manual-btn"></label>
-          <label for="radio3" class="manual-btn"></label>
-        </div>
-      </div>
-  </section>
-  <section id="teste2"class="conteudo">
-    <div class="slider">
-      <input type="radio" name="radio-btn" id="radio4"/>
-      <input type="radio" name="radio-btn" id="radio5" />
-      <input type="radio" name="radio-btn" id="radio6" />
-      <div class="slides">
-        <div class="slide first">
-          <img src="/Fotos/selfcare1.jpeg" alt="Imagem4" />
-        </div>
-        <div class="slide">
-          <img src="/Fotos/selfcare2.jpeg" alt="Imagem5" />
-        </div>
-        <div class="slide">
-          <img src="/Fotos/selfcare3.jpeg" alt="Imagem6" />
-        </div>
-        <div class="manual-navigation">
-          <label for="radio4" class="manual-btn"></label>
-          <label for="radio5" class="manual-btn"></label>
-          <label for="radio6" class="manual-btn"></label>
-        </div>
-      </div>
-    </section>
-  </section> -->
+  <div class="selectorList">
+    <button class="selector-button" onclick="mostrarConteudo('bazar')">Bazar beneficente</button>
+    <button class="selector-button" onclick="mostrarConteudo('psi')">Apoio psicologico</button>
+    <button class="selector-button" onclick="mostrarConteudo('fisio')"">Fisioterapia</button>
+  </div>
+  <hr>
+<div id="bazar" class="conteudo" style="display:none;">
+  <div class="bazar-flex">
+    <p>O valor arrecadado no bazar será destinado a ajudar os pacientes com medicamentos/ suplementação e continuar o nosso grande projeto.</p>
+    <img src="../../Fotos/bazarImage.png" class="imageBazar">
+  </div>
+  <div class="bazarButton">
+    <button onclick="window.open('https://www.instagram.com/institutoflorescersaocarlos/', '_blank')">
+      Nos siga no Instagram para acompanhar nossos próximos bazares
+    </button>
+  </div>
+</div>
+
+<div id="psi" class="conteudo" style="display:none;">
+  <div class="bazar-flex">
+    <p>Cuidar da saúde mental é tão importante quanto cuidar do corpo! Dedique tempo para ouvir seus sentimentos, buscar equilíbrio e praticar o autocuidado. Sua mente merece atenção, carinho e respeito. </p>
+    <img src="../../Fotos/imagePsi.png" class="imageBazar">
+  </div>
+  <div class="bazarButton">
+     <button onclick="window.open('https://www.instagram.com/institutoflorescersaocarlos/', '_blank')">
+      Nos siga no Instagram!
+    </button>
+  </div>
+</div>
+
+<div id="fisio" class="conteudo" style="display:none;">
+<div class="bazar-flex">
+    <p>
+O exercício físico pode ser um grande aliado no bem-estar durante o tratamento oncológico! Movimentos leves ajudam a melhorar a disposição, aliviar tensões e até mesmo reduzir o estresse.</p>
+    <img src="../../Fotos/imageFisio.png" class="imageBazar">
+  </div>
+  <div class="bazarButton">
+     <button onclick="window.open('https://www.instagram.com/institutoflorescersaocarlos/', '_blank')">
+      Nos siga no Instagram!
+    </button>
+  </div>
+</div>
+</div>
   <section class="donationImgsection">
     <div class="donationImg">
       <img src="/Fotos/donationImg.png" alt="">
@@ -197,13 +169,17 @@
   });
   function mostrarConteudo(id) {
       // Oculta todos
-      document.querySelectorAll('.conteudo').forEach(el => {
-        el.classList.remove('ativo');
-      });
+      document.querySelectorAll('.conteudo').forEach((div) => {
+      div.style.display = 'none';
+    });
+
 
       // Mostra o escolhido
-      document.getElementById(id).classList.add('ativo');
-    }
+     document.getElementById(id).style.display = 'block';
+  }
+    window.addEventListener('DOMContentLoaded', () => {
+    mostrarConteudo('bazar');
+  });
 </script>
 
 </html>

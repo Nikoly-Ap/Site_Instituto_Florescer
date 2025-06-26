@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato</title>
-    <link rel="stylesheet" href="../styles/header.css">
-    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="./SRC/styles/header.css">
+    <link rel="stylesheet" href="./SRC/styles/styles.css">
 </head>
 <body>
     <header>
         <nav id = "navbar">
             <img src="/Fotos/logo4.png" height="70px" width="70px" alt="Flor">
-             <H1 id = Title> <span style="color:#BF3B53">Instituto Florescer</span></H1> 
+             <H1 id = Title> <span style="color:#1d1d1dad">Instituto Florescer</span></H1> 
              <div class="mobile-menu">
                 <div class="line1"></div>
                 <div class="line2"></div>
@@ -24,12 +24,6 @@
                 <li class="nav_item" id="about">
                     <a href="about.html">Sobre nós</a>
                 </li>
-                <li class="nav_item" id="history">
-                    <a href="history.html">História do Instituto</a>
-                </li>
-                <li class="nav_item" id="transparency">
-                    <a href="transparency.html ">Transparência</a>
-                </li>
                 <li class="nav_item" >
                   <element id="contactselect"><a href="contact.html">Contato</a> </element>
                 </li> 
@@ -38,16 +32,20 @@
     </header>
     <img src="" alt="">
     <script src="../Javascript/mobile.navbar.js"></script>
-
-    <div class="page_contact">
-        <div id="moldura">
-            <img src="/Fotos/Contate-nos.png" height="610px" width="650px"  alt="ramos"> 
-        </div>
+  <div class="page_contact">
+     <section class="logoinstituto">
+    <div class="logo">
+      <img src="/Fotos/1748277707012.png" />
+    </div>
+  </section>
+    
         <div id="text_contact">
             <H1>CONTATO</H1><br>
-            <P>Quer saber mais sobre nós?</P> <br>
+            <p>Quer saber mais sobre nós?</P> <br>
             <p>Entre em contato:</p>
-            <a href="https://www.instagram.com/institutoflorescersaocarlos/"><button type = "button" >Siga-nos no Instagram</button><br></a>
+            <button onclick="window.open('https://www.instagram.com/institutoflorescersaocarlos/', '_blank')">
+                Instagram
+            </button>
         </div>
     </div>
    

@@ -1,18 +1,22 @@
-*{
+* {
     font-family: 'Poppins', sans-serif;
     font-weight: 200;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body, html {
+
+body,
+html {
     max-width: 100%;
+    height: 100%;
     overflow-x: hidden;
+    background-color: #fff9ea;
 }
 
 .slider {
     position: relative;
-    width:100%;
+    width: 100%;
     height: 100%;
     margin: 0px auto;
     overflow: hidden;
@@ -22,9 +26,11 @@ body, html {
     z-index: 15;
     flex-wrap: wrap;
 }
-.slider input{
-    display:none;
+
+.slider input {
+    display: none;
 }
+
 .slides {
     width: 300%;
     height: 700px;
@@ -33,22 +39,24 @@ body, html {
 }
 
 .slide img {
-    width:100%;
+    width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
 @media (min-width: 768px) {
     .slide img {
-        width:1300px;
-        height:700px;
+        width: 1300px;
+        height: 700px;
         object-fit: cover;
     }
+
     .slider {
-        width:1300px;
+        width: 1300px;
         height: 700px;
     }
 }
+
 @media (max-width: 480px) {
     .slider {
         width: 100%;
@@ -81,19 +89,22 @@ body, html {
         display: block;
     }
 
-    #radio1:checked ~ .slides {
+    #radio1:checked~.slides {
         margin-left: 0%;
     }
-    #radio2:checked ~ .slides {
+
+    #radio2:checked~.slides {
         margin-left: -100%;
     }
-    #radio3:checked ~ .slides {
+
+    #radio3:checked~.slides {
         margin-left: -200%;
     }
 }
+
 .body {
     overflow-x: hidden;
-  }
+}
 
 .navigation-auto {
     position: absolute;
@@ -105,7 +116,8 @@ body, html {
     Z-index: 10;
     flex-wrap: wrap;
 }
-.manual-navigation{
+
+.manual-navigation {
     position: absolute;
     bottom: 10px;
     width: 100%;
@@ -117,13 +129,14 @@ body, html {
     flex-wrap: wrap;
 }
 
-.manual-btn{
+.manual-btn {
     border: 2px solid #868684;
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
     transition: 0.5s;
 }
+
 .navigation-auto div {
     border: 2px solid #868684;
     padding: 5px;
@@ -132,59 +145,60 @@ body, html {
     transition: 0.5s;
 }
 
-.manual-btn:hover{
-    background-color: #868684;
-} 
-#radio1:checked ~.navigation-auto .auto-btn1{
+.manual-btn:hover {
     background-color: #868684;
 }
-#radio2:checked ~.navigation-auto .auto-btn2{
+
+#radio1:checked~.navigation-auto .auto-btn1 {
     background-color: #868684;
 }
-#radio3:checked ~.navigation-auto .auto-btn3{
+
+#radio2:checked~.navigation-auto .auto-btn2 {
+    background-color: #868684;
+}
+
+#radio3:checked~.navigation-auto .auto-btn3 {
     background-color: #868684;
 }
 
 
-.manual-btn:not(:last-child){
-    margin-right:20px ;
-}
-.navigation-auto div:not(:last-child){
+.manual-btn:not(:last-child) {
     margin-right: 20px;
 }
 
-#radio1:checked ~.slides .first{
-    margin-left:0;
+.navigation-auto div:not(:last-child) {
+    margin-right: 20px;
+}
+
+#radio1:checked~.slides .first {
+    margin-left: 0;
 
 }
-#radio2:checked ~.slides .first{
-    margin-left:-100%
 
+#radio2:checked~.slides .first {
+    margin-left: -100%
 }
-#radio3:checked ~.slides .first{
-    margin-left:-200%
+
+#radio3:checked~.slides .first {
+    margin-left: -200%
 }
-.textAbout{
-    display:flex;
+
+.textAbout {
+    display: flex;
     align-items: flex-start;
     justify-content: center;
-    flex-direction:row;
+    flex-direction: row;
+    gap: 50px;
+    margin-bottom: 50px;
+    margin-top: 50px;
 }
-.textarea{
-    background-color:#bf3b53d1;
-    width: 25%;
-    border-radius: 50px;
-    height: 100%;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin: 30px 30px;
-    transition: all 0.3s ease;
-    cursor: pointer
+
+.aboutArea {
+    gap: 50px;
 }
-.textarea h1 {
+
+
+/* .textarea h1 {
     font-size: 30px;
 }
 .textarea h2 {
@@ -202,9 +216,8 @@ body, html {
   }
   
   .accordion-body {
-    max-height: 0;
     overflow: hidden;
-    transition: max-height 0.5s ease;
+    transition: max-width 0.5s ease;
     padding: 0 30px;
   }
   
@@ -214,10 +227,368 @@ body, html {
   }
   
   .textarea.active .accordion-body {
-    max-height: 800px; 
-  }
+    max-width:100%; 
+  } */
+button {
+    border: none;
+    color: #f9f9f9;
+    background-color: #bf3b53d1;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    margin: 20px;
+    display: block;
+    z-index: 30;
+}
 
+.textareaMission {
+    background-color: #bf3b53d1;
+    width: 550px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border-radius: 15px;
+    padding-left: 10px;
+}
 
+.textareaMission h1 {
+    font-size: 30px;
+    color: #fff9ea;
+    font-weight: 300;
+}
 
+.textareaMission p {
+    font-size: 20px;
+    color: #fff9ea;
+    font-weight: 300;
+}
 
- 
+.textareaVision {
+    background-color: #bf3b53d1;
+    width: 550px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    border-radius: 15px;
+    padding-left: 10px;
+}
+
+.textareaVision h1 {
+    font-size: 30px;
+    color: #fff9ea;
+    font-weight: 300;
+}
+
+.textareaVision p {
+    font-size: 20px;
+    color: #fff9ea;
+    font-weight: 300;
+}
+
+.textareaValue {
+    align-items: center;
+    gap: 40px;
+    padding-left: 10px;
+}
+
+.divValue {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: #bf3b53d1;
+    width: 90%;
+    height: 400px;
+    gap: 40px;
+    margin-bottom: 50px;
+    border-radius: 15px;
+}
+
+.areaValue {
+    display: flex;
+    justify-content: center;
+}
+
+.textareaValue h1 {
+    font-size: 30px;
+    color: #fff9ea;
+    font-weight: 300;
+}
+
+.textParagraph h2 {
+    font-size: 25px;
+    color: #fff9ea;
+    font-weight: 400;
+
+}
+
+.textParagraph h3 {
+    font-size: 20px;
+    color: #fff9ea;
+    font-weight: 300;
+}
+
+.selector-button {
+    padding: 10px 15px;
+    width: 300px;
+    height: 80px;
+    cursor: pointer;
+    border-style: solid;
+    background-color: #bf3b53d1;
+    color: #f9f9f9;
+}
+
+.history {
+    height: 800px;
+}
+
+.conteudo {
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: white;
+    width: 100%;
+    height: 500px;
+    margin-bottom: 50px;
+}
+
+.origin-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.conteudo p {
+    width: 900px;
+    height: 260px;
+    font-size: 22px;
+    font-weight: 400;
+    color: #1d1d1dad;
+}
+
+.conteudo button {
+    background-color: #bf3b53d1;
+    width: 600px;
+    height: 60px;
+    color: #f9f9f9;
+}
+
+.conteudo button a {
+    text-decoration: none;
+}
+
+.textAreaSelect {
+    background-color: #bf3b53d1;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.textAreaSelect h1 {
+    color: #f9f9f9;
+    font-family: 'Poppins', '400Regular';
+    font-weight: 150;
+    font-size: 50px;
+}
+
+#titleSelect {
+    color: #f9f9f9;
+    font-family: 'Poppins', '400Regular';
+    font-weight: 300;
+    font-size: 50px;
+}
+
+.selectorList {
+    background-color: #bf3b53d1;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.imageBazar {
+    width: 350px;
+    height: 350px;
+}
+
+.volunteers {
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.areaVolunteers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+
+.titleAreaVolunteers {
+    background-color: #bf3b53d1;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.titleAreaVolunteers h1 {
+    color: #f9f9f9;
+    font-family: 'Poppins', '400Regular';
+    font-weight: 150;
+    font-size: 50px;
+}
+
+.individualArea h2 {
+    color: #f9f9f9;
+    font-family: 'Poppins', '400Regular';
+    font-weight: 300;
+    font-size: 25px;
+}
+
+.individualArea h3 {
+    color: #f9f9f9;
+    font-family: 'Poppins', '400Regular';
+    font-weight: 200;
+    font-size: 20px;
+}
+
+.pictureVoluteers {
+    width: 350px;
+    height: 350px;
+}
+
+.individualArea {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #bf3b53d1;
+    width: 400px;
+    height: 600px;
+    margin-top: 20px;
+    border-radius: 15px;
+    border-color: #868684;
+}
+
+.titleAreaDonation {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.titleAreaDonation h1 {
+    color: #f9f9f9;
+    font-family: 'Poppins', '400Regular';
+    font-weight: 300;
+    font-size: 45px;
+}
+
+.titleAreaDonation h2 {
+    color: #f9f9f9;
+    font-family: 'Poppins', '400Regular';
+    font-weight: 200;
+    font-size: 25px;
+}
+
+.donation {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    background-color: #bf3b53d1;
+    width: 100%;
+    height: 150px;
+}
+
+.buttonDonation {
+    height: 60px;
+    width: 250px;
+}
+
+#transparency {
+    height: 300px;
+}
+
+.titleAreaTransparency h1 {
+    color: #f9f9f9;
+    font-family: 'Poppins', '400Regular';
+    font-weight: 300;
+    font-size: 45px;
+}
+
+.titleAreaTransparency {
+    background-color: #bf3b53d1;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+    animation: fadeIn 0.3s ease;
+}
+
+.fechar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #aaa;
+}
+
+.fechar:hover {
+    color: #000;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
