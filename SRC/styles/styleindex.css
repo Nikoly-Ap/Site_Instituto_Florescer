@@ -196,16 +196,6 @@ button a {
     background-color: #bf3b53d1;
     color: #f9f9f9;
 }
-.selector-button {
-    padding: 10px 15px;
-    width: 300px;
-    height: auto;
-    cursor: pointer;
-    border-style: solid;
-    background-color: #f9f9f9;
-    color: #bf3b53d1;
-}
-
 .conteudo {
     padding: 10px;
     border: 1px solid #ddd;
