@@ -65,7 +65,7 @@ body {
     padding: 15px;
     margin-top: 15px;
     flex-wrap: wrap;
-    height: 700px;
+    height:auto;
 
 }
 
@@ -173,26 +173,20 @@ button a {
 }
 
 .donationImgsection {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     height: 700px;
-    margin: 0 0;
     overflow: hidden;
 }
 
 .donationImg img {
-    flex: 1;
-    max-width: 100%;
-    margin: 0 0%;
-    display: block;
+    max-width: 110%;
+    height: auto;
 }
 
 .selector-button {
     padding: 10px 15px;
     width: 300px;
-    height: 80px;
+    height: auto;
     cursor: pointer;
     border-style: solid;
     background-color: #bf3b53d1;
@@ -204,7 +198,7 @@ button a {
     border: 1px solid #ddd;
     background-color: white;
     width: 100%;
-    height: 450px;
+    height: auto;
 }
 .bazar-flex {
   display: flex;
@@ -223,7 +217,7 @@ button a {
 .conteudo button{
     background-color: #bf3b53d1;
     width:600px;
-    height:60px;
+    height:auto;
     color:#f9f9f9;
 }
 .conteudo button a{
@@ -269,4 +263,125 @@ button a {
 .imageBazar {
     width: 350px;
     height: 350px;
+}
+@media (max-width: 768px) {
+  #title{
+   font-size: 16px;
+  }
+  .logo img {
+    max-width: 105%;
+    height: auto;
+    margin-top: 50px;
+    margin-left:auto;
+    display: block;
+  }
+  .conteudo button{
+    background-color: #bf3b53d1;
+    max-width:90%;
+    height:auto;
+    color:#f9f9f9;
+}
+
+  .logoinstituto {
+    flex-direction: column;
+    padding-top: 20px;
+    max-height: none;
+  }
+
+  .textarea {
+    width: 95%;
+    padding: 20px;
+    font-size: 16px;
+  }
+
+  .textarea h1,
+  .textarea h3 {
+    width: 100%;
+    font-size: 22px;
+  }
+
+  .accordion-body h3 {
+    font-size: 18px;
+  }
+
+  .bazar-flex {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .conteudo {
+    height: auto;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .conteudo p {
+    width: 100%;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .conteudo button {
+    width: 90%;
+    height: auto;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  .textAreaSelect {
+    height: auto;
+    padding: 20px;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+    .selector-button {
+    padding: 10px 15px;
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    border-style: solid;
+    background-color: #bf3b53d1;
+    color: #f9f9f9;
+}
+
+  .textAreaSelect h1,
+  #titleSelect {
+    font-size: 20px;
+  }
+
+  .selectorList {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .selector-button {
+    width: 90%;
+    height: auto;
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  .donationImgsection {
+    height: auto;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .donationImg img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .imageBazar {
+    width: 70%;
+    height: auto;
+  }
+
+  button {
+    font-size: 10px;
+    padding: 10px 25px;
+  }
 }
