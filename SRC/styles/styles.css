@@ -107,7 +107,7 @@ button {
     position: relative;
     left: auto;
     top: auto;
-    top:25%; left: 0;
+    top:5%; left: 0;
     transform: none;
     display: flex;
     flex-direction: column;
@@ -132,7 +132,7 @@ button {
 .page_contact::before {
   content: "";
   position: absolute;
-  top:20%; left: 0;
+  top:10%; left: 0;
   width: 100%;
   height: 100%;
   background-image: url('../../Fotos/FUNDO CONTACT.png');
