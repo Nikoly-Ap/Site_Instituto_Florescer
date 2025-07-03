@@ -33,6 +33,7 @@ html {
     align-items: center;
     padding-top: 30px;
     position: relative;
+    margin: 20px;
 }
 
 #text_contact {
@@ -81,9 +82,15 @@ button {
     transition: all 0.3s ease-in-out;
     position: relative;
     overflow: hidden;
-    margin: 20px;
+    margin: 5px;
     display: block;
     z-index: 30;
+}
+.buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 @media (max-width: 768px) {
   #title{
@@ -139,5 +146,22 @@ button {
     border-style: solid;
     background-color: #bf3b53d1;
     color: #f9f9f9;
+}
+button {
+    border: none;
+    color: #fff9ea;
+    background-color: #bf3b53d1;
+    padding: 10px 10px;
+    font-size: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    margin: 5px;
+    display: block;
+    align-items: center;
+    z-index: 30;
 }
 }

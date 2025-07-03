@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato</title>
-    <link rel="stylesheet" href="./SRC/styles/header.css">
-    <link rel="stylesheet" href="./SRC/styles/styles.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/styles.css">
 </head>
 <body>
     <header>
         <nav id = "navbar">
-            <img src="./logo4.png" height="70px" width="70px" alt="Flor">
              <H1 id = Title> <span style="color:#1d1d1dad">Instituto Florescer</span></H1> 
              <div class="mobile-menu">
                 <div class="line1"></div>
@@ -19,23 +18,23 @@
              </div>
             <ul class ="nav_list">
                 <li class="nav_item" id="index">
-                    <a href="index.html">Início</a>
+                    <a href="../../index.html">Início</a>
                 </li>
                 <li class="nav_item" id="about">
-                    <a href="about.html">Sobre nós</a>
+                    <a href="../Html/about.html">Sobre nós</a>
                 </li>
                 <li class="nav_item" >
-                  <element id="contactselect"><a href="contact.html">Contato</a> </element>
+                  <element id="contactselect"><a href="../Html/contact.html">Contato</a> </element>
                 </li> 
             </ul>
         </nav>
     </header>
     <img src="" alt="">
-    <script src="./SRC/Javascript/mobile.navbar.js"></script>
+    <script src="../Javascript/mobile.navbar.js"></script>
   <div class="page_contact">
      <section class="logoinstituto">
     <div class="logo">
-      <img src="./1748277707012.png" />
+      <img src="../../Fotos/1748277707012.png" />
     </div>
   </section>
     
@@ -43,9 +42,18 @@
             <H1>CONTATO</H1><br>
             <p>Quer saber mais sobre nós?</P> <br>
             <p>Entre em contato:</p>
+        
+            <div class="buttons">
             <button class="buttonContact" onclick="window.open('https://www.instagram.com/institutoflorescersaocarlos/', '_blank')">
                 Instagram
             </button>
+            <button class="buttonContact" onclick="window.location.href='mailto:institutoflorescersc@gmail.com?subject=Contato%20via%20site&body=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20a%20ONG!'">
+                Email
+            </button>
+            <button class="buttonContact" onclick="window.open('https://wa.me/5516992721412?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20a%20ong!', '_blank')">
+                WhatsApp
+            </button>
+            </div>
         </div>
     </div>
    

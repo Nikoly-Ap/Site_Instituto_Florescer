@@ -371,14 +371,7 @@ button {
 .textAreaSelect h1 {
     color: #f9f9f9;
     font-family: 'Poppins', '400Regular';
-    font-weight: 150;
-    font-size: 50px;
-}
-
-#titleSelect {
-    color: #f9f9f9;
-    font-family: 'Poppins', '400Regular';
-    font-weight: 300;
+    font-weight: 250;
     font-size: 50px;
 }
 
@@ -430,7 +423,7 @@ button {
     color: #f9f9f9;
     font-family: 'Poppins', '400Regular';
     font-weight: 300;
-    font-size: 25px;
+    font-size: 28px;
 }
 
 .individualArea h3 {
@@ -443,7 +436,7 @@ button {
 
 .pictureVoluteers {
     width: 320px;
-    height: 400px;
+    height: 425px;
     border-radius: 20px;
 }
 
@@ -454,7 +447,7 @@ button {
     flex-direction: column;
     background-color: #bf3b53d1;
     width: 450px;
-    height: 900px;
+    height: 950px;
     margin-top: 20px;
     padding: 10px;
     padding-top: 20px;
