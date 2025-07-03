@@ -44,7 +44,6 @@ html {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 999;
     text-align: center;
     color: #1d1d1dad;
     padding: 20px;
@@ -66,9 +65,10 @@ html {
 }
 .page_contact {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    position: relative;
+    justify-content: center;
+    padding: 20px;
 }
 button {
     border: none;
@@ -92,38 +92,53 @@ button {
     justify-content: center;
     align-items: center;
 }
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   #title{
    font-size: 16px;
   }
   .logoinstituto {
-    display: flex;
-    margin: auto 0%;
-    max-width: 110%;
-    max-height: 700px;
-    align-items: center;
-    position: relative;
-}
+    display: none;
+ }
 
   .logo img {
-    max-width: 105%;
-    height:80%;
-    margin-top: 100px;
-    margin-left:auto;
-    display: block;
+    display: none;
   }
-  #text_contact {
+#text_contact {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    flex-direction:column;
-    position: absolute;
-    top: 75%;
-    z-index: 999;
+    justify-content: center;
     text-align: center;
-    color: #1d1d1dad;
-
+    margin: 0 auto;
+    
 }
-
+.page_contact {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 1; /* Garante que o conteúdo fique acima */
+  overflow: hidden;
+}
+.page_contact::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../Fotos/FUNDO CONTACT.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  opacity: 60%; 
+  z-index: -1; 
+}
 #text_contact h1 {
     color: #bf3b53d1;
     font-family: 'Poppins', '400Regular';

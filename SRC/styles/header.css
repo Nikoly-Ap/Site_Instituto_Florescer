@@ -28,8 +28,7 @@ html, body {
     position: fixed;
     z-index: 100;
     height: auto;
-    background-color: #fff9ea;
-    opacity: 90%;
+    background-color: rgba(255, 249, 234, 0.9)
 }
 .nav_list{
     display: flex;
@@ -108,10 +107,6 @@ html, body {
    text-align: center;
    justify-content: center;
      }
-      #navbar img{
-   width: 40px;
-   height: 40px;
-     }
     
 
 }
@@ -124,7 +119,8 @@ html, body {
   right: 0;
   width: 80%;
   height: auto;
-  background-color: #bf3b53d1;
+  opacity: 100%;
+  background-color:  #BF3B53;
   padding: 20px;
   border-radius: 10px;
   z-index: 1000;
@@ -134,21 +130,6 @@ html, body {
   transform: rotate(-45deg) translate(-5px, 6px);
 }
 
-
-
-#transparencyselect a{
-    border-radius: 5px;
-    display:block;
-    width: 115px;
-    height:25px;
-    background-color:#BF3B53;
-    color: #fff9ea;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    
-
-}
 @keyframes navLinkFade{
     from{
         opacity: 0;
@@ -174,7 +155,7 @@ html, body {
     border-radius: 5px;
     display:block;
     padding: 5px;
-    background-color:#BF3B53;
+    background-color:#92293c;
     color: #fff9ea;
     align-items: center;
     justify-content: center;
@@ -186,7 +167,7 @@ html, body {
     border-radius: 5px;
     display:block;
     padding: 5px;
-    background-color:#BF3B53;
+    background-color:#92293c;
     color: #fff9ea;
     align-items: center;
     justify-content: center;
@@ -198,7 +179,7 @@ html, body {
     border-radius: 5px;
     display:block;
     padding: 5px;
-    background-color:#BF3B53;
+    background-color:#92293c;
     color: #fff9ea;
     align-items: center;
     justify-content: center;
