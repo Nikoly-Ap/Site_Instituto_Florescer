@@ -122,6 +122,8 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 600px;
+  width: auto;
   padding: 20px;
   z-index: 1; /* Garante que o conteúdo fique acima */
   overflow: hidden;
@@ -143,19 +145,19 @@ button {
     color: #bf3b53d1;
     font-family: 'Poppins', '400Regular';
     font-weight: 400;
-    font-size: 25px;
+    font-size: 35px;
 
 }
 #text_contact p {
     color: #1d1d1dad;
     font-family: 'Poppins', '400Regular';
     font-weight:400;
-    font-size: 12px;
+    font-size: 25px;
 
 }
 .buttonContact{
     padding: 10px 15px;
-    width: 80%;
+    width: 100%;
     height: auto;
     cursor: pointer;
     border-style: solid;
@@ -166,8 +168,8 @@ button {
     border: none;
     color: #fff9ea;
     background-color: #bf3b53d1;
-    padding: 10px 10px;
-    font-size: 10px;
+    padding: 10px 15px;
+    font-size: 18px;
     font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
